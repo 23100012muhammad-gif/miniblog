@@ -1,63 +1,78 @@
 ## MiniBlog
-MiniBlog is a personal project with the sole purpose of practicing the new features of Laravel 9 and its UI for the dashboard with Blade and Vite.
-
-If you are practicing or learning Laravel 9 (or higher) feel free to use this repository.
+Project ini merupakan hasil modifikasi dari repositori MiniBlog Laravel yang awalnya dibuat oleh [@abrahamuchos](https://github.com/abrahamuchos). Saya melakukan penyesuaian dan perbaikan untuk keperluan belajar serta pengembangan pribadi.
 
 <img src="/docs/Screen%20Shot%202024-12-19%20at%2016.29.10.png" alt="guest" width="auto"/>
 
+## 🔧 Yang Sudah Saya Perbaiki / Modifikasi
+Beberapa perubahan yang telah saya lakukan antara lain:
 
-## ✅ Features
-- Login/Sign up user
-- Show All Posts and Post
-- Edit Post
-- Show Users
-- Create new post
-- Delete post
-- Create new user
+- Menyesuaikan tampilan halaman utama dan halaman blog agar lebih rapi.
+- Mengatur ulang routing untuk halaman depan, detail postingan, dan dashboard.
+- Menambahkan fitur pencarian postingan pada halaman utama.
+- Menyesuaikan alur navigasi antara dashboard dan halaman postingan.
+- Memperbaiki fitur CRUD postingan untuk pengguna yang sudah login.
+- Menyesuaikan validasi form untuk judul, slug, dan isi konten.
+- Mengubah tampilan halaman create, edit, dan dashboard admin.
+- Menyusun relasi antara pengguna dan postingan agar lebih sesuai dengan alur aplikasi.
+
+## ✅ Fitur Utama
+- Login / Register
+- Melihat daftar postingan dan detail postingan
+- Membuat postingan baru
+- Mengedit postingan
+- Menghapus postingan
+- Pencarian postingan
 
 ## ⚙️ Tech Stack
-
 - Laravel 9.19
-- Postgre 13
+- PostgreSQL 13
 - Laravel Breeze 1.11
+- Blade + Vite
 
-
-## 💾 Installation
-
-Install and run
-
-1. Clone and move to folder
+## 💾 Instalasi
+1. Clone repository
 ```bash
-$ git clone git@github.com:abrahamuchos/mini-blog.git
-$ cd mini-blog
+git clone https://github.com/23100012muhammad-gif/miniblog.git
+cd miniblog
 ```
 
-2. Install dependencies
+2. Install dependency
 ```bash
-$  composer install
-$  npm install
-$  npm run build
+composer install
+npm install
+npm run build
 ```
 
-4. Create a copy of the `.env.example` file and rename it to `.env`. Next, configure the necessary environment variables.
+3. Buat file `.env` dari `.env.example`, lalu sesuaikan konfigurasi database.
 
-5. Generate an application key by running `php artisan key:generate`.
-
-6. Run `php artisan migrate` to create the database tables.
-
-7. Run `php artisan db:seed` to create dummy data and admin user.
-8. Run `php artisan serve` to start the Laravel development server.
-
-
-#### User to test
-* **email**: abraham@mail.com
-* **password**: password
-
-## Environment Variables
-
-To run this project, you will need to add the following environment variables to your .env file
-
+4. Generate application key
+```bash
+php artisan key:generate
 ```
+
+5. Jalankan migrasi database
+```bash
+php artisan migrate
+```
+
+6. (Opsional) Jalankan seeder untuk data dummy
+```bash
+php artisan db:seed
+```
+
+7. Jalankan server
+```bash
+php artisan serve
+```
+
+## 🔐 User Untuk Testing
+- Email: `abraham@mail.com`
+- Password: `password`
+
+## 🧾 Environment Variables
+Untuk menjalankan project ini, pastikan `.env` memiliki variabel berikut:
+
+```env
 DB_HOST
 DB_PORT
 DB_DATABASE
@@ -65,18 +80,20 @@ DB_USERNAME
 DB_PASSWORD
 ```
 
-## Screenshots
+## 📸 Screenshot
 <img src="/docs/Screen%20Shot%202024-12-19%20at%2016.29.20.png" alt="drawing" width="500px"/>
 <img src="/docs/Screen%20Shot%202024-12-19%20at%2016.29.30.png" alt="login" width="500px"/>
 <img src="/docs/Screen%20Shot%202024-12-19%20at%2016.29.51.png" alt="edit" width="500px"/>
 
+## 👤 Modified By
+Project ini dimodifikasi dan dikembangkan oleh:
+- Muhammad Gif
+- GitHub: [23100012muhammad-gif](https://github.com/23100012muhammad-gif)
 
-## 🧑‍💻 Authors
+## 🧑‍💻 Sumber Asli
+Project ini awalnya berasal dari repository berikut:
+- [abrahamuchos/mini-blog](https://github.com/abrahamuchos/mini-blog)
 
-- [@abrahamuchos](https://github.com/abrahamuchos)
-- [Contact mail](mailto:j.abraham29@gmail.com)
-
-
-## 📄 License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+## 📄 Lisensi
+Project ini tetap menggunakan lisensi original dari repositori awal (MIT License).
+Harap tetap menyertakan credit asli jika digunakan kembali.
